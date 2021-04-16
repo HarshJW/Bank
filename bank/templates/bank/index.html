@@ -1,0 +1,88 @@
+{% extends 'bank/basic.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" href="{%static 'home.css' %}">
+{% endblock %}
+
+
+{% block body %}
+{% load static %}
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{%static '1.jpeg'%}" class=" d-block image w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: #00ffff;font-size: 2rem;">Welcome to the SP Bank</h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{%static '2.jpg'%}" class="d-block image w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style = "color: #fc0000;font-size: 1.5rem;">THE ART IS NOT IN MAKING MONEY BUT KEEPING IT</h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static '12.jpg'%}" class="d-block image w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: #ff0101;font-size: 2rem;">SAVE MONEY &<br>MONEY WILL SAVE YOU.</h5>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+
+
+
+  <div class="container p-xs-5" id="transaction">
+    <div class="row g-3 justify-content-around mt-5 mb-5">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{%static '7.jpeg'%}" class="card-img-center" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Create Account</h5>
+              <p class="card-text">Welcome to create new account in Bank.</p>
+              <a href="/bank/create_account/" class="btn btn-info">Create</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{%static 'Debit-card.jpg'%}" class="card-img-center" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">View All Accounts</h5>
+            <p class="card-text">To View all Accounts and do Transfer</p>
+            <a href="/bank/view/" class="btn btn-info">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{%static '8.jpg'%}" class="card-img-center img" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">View Transactions</h5>
+              <p class="card-text">Here you can All the previous Transactions.</p>
+              <a href="/bank/transaction_history/" class="btn btn-info">History</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

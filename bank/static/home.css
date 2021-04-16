@@ -1,0 +1,19 @@
+
+
+.container{
+    height: auto;
+    min-height: 75vh;
+}
+.image{
+  height: 90vh;
+}
+.card img{
+    height: 150px;
+}
+
+img.d-block.image.w-100 {
+    height: 80vh;
+}
+#transaction {
+    height: max-content;
+}
